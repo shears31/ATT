@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>{% if page_title %}{{ page_title }} — {% endif %}At The Turn Golf Co.</title>
+    {{ content_for_header }}
+    <link rel="stylesheet" href="{{ 'styles.css' | asset_url }}">
+  </head>
+  <body>
+    {% render 'header' %}
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="{{ 'logo-badge-white.png' | asset_url }}" alt="At The Turn Golf Co. logo" />
+            <p class="footer-tagline">Golf, Style &amp; The Turn</p>
+          </div>
+          <div>
+            <h4>Shop</h4>
+            <a href="/collections/all">All Products</a><br/>
+            <a href="/collections/frontpage">Featured</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="/pages/about">About</a><br/>
+            <a href="/pages/contact">Contact</a>
+          </div>
+        </div>
+        <p class="copyright">© {{ 'now' | date: "%Y" }} At The Turn Golf Co.</p>
+      </div>
+    </footer>
+
+    {{ content_for_footer }}
+  </body>
+</html>

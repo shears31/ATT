@@ -1,0 +1,25 @@
+<article class="product-card" aria-labelledby="product-{{ product.id }}">
+  <a href="{{ product.url }}" class="product-link">
+    {% if product.featured_image %}
+      <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}" loading="lazy" />
+    {% else %}
+      <img src="{{ 'placeholder.jpg' | asset_url }}" alt="{{ product.title | escape }}" />
+    {% endif %}
+  </a>
+
+  <h3 id="product-{{ product.id }}"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+  <p class="price">
+    {% if product.compare_at_price > product.price %}
+      <span class="was">{{ product.compare_at_price | money }}</span>
+    {% endif %}
+    <span class="now">{{ product.price | money }}</span>
+  </p>
+
+  <div class="product-cta">
+    <a class="btn-secondary" href="{{ product.url }}">View</a>
+    <form method="post" action="/cart/add" class="quick-add" data-product-id="{{ product.id }}">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+      <button type="submit" class="btn-primary">Quick add</button>
+    </form>
+  </div>
+</article>

@@ -1,0 +1,47 @@
+{% comment %}
+Hero section — uses theme setting "hero_image" (image_picker).
+Fallback: assets/header-hero.jpg (place your provided header image at assets/header-hero.jpg)
+{% endcomment %}
+
+<section class="hero hero-banner" aria-label="Site header">
+  <div class="hero-banner__media">
+    {% if section.settings.hero_image != blank %}
+      <img src="{{ section.settings.hero_image | img_url: '2048x' }}" alt="{{ section.settings.hero_image_alt | escape }}" />
+    {% else %}
+      <img src="{{ 'header-hero.jpg' | asset_url }}" alt="At The Turn Golf Co. header" />
+    {% endif %}
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>Golf. Style. The Turn.</h1>
+      <p>Premium hats, towels and accessories crafted for the course and the clubhouse.</p>
+      <a href="/collections/frontpage" class="btn-primary">Shop New Releases</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "hero_image_alt",
+      "label": "Hero image alt text",
+      "default": "At The Turn Golf Co. header"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
