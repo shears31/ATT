@@ -4,16 +4,16 @@ import './App.css';
 function App() {
   const [cartCount] = useState(0);
 
-  // Mock product data from the Shopify CSV
+  // Real product data with actual hat mockups
   const products = [
-    { id: 1, title: 'Classic Golf Hat - Navy', price: 28.00, image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&h=400&fit=crop' },
-    { id: 2, title: 'Premium Golf Hat - White', price: 28.00, image: 'https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?w=400&h=400&fit=crop' },
-    { id: 3, title: 'Signature Golf Hat - Black', price: 28.00, image: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?w=400&h=400&fit=crop' },
-    { id: 4, title: 'Golf Hat - Khaki', price: 28.00, image: 'https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?w=400&h=400&fit=crop' },
-    { id: 5, title: 'Performance Golf Hat - Grey', price: 28.00, image: 'https://images.unsplash.com/photo-1552446865-969e00f0cd7e?w=400&h=400&fit=crop' },
-    { id: 6, title: 'Classic Golf Hat - Green', price: 28.00, image: 'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop' },
-    { id: 7, title: 'Golf Towel - White', price: 24.00, image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=400&fit=crop' },
-    { id: 8, title: 'Premium Golf Towel - Navy', price: 24.00, image: 'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&h=400&fit=crop' },
+    { id: 1, title: 'Camo on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg' },
+    { id: 2, title: 'Blue 2 on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg' },
+    { id: 3, title: 'Carolina on Blue/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg' },
+    { id: 4, title: 'Diego on Grey/Tan/Lite Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg' },
+    { id: 5, title: 'Camo on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg' },
+    { id: 6, title: 'Blue 2 on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg' },
+    { id: 7, title: 'Carolina on Blue/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg' },
+    { id: 8, title: 'Diego on Grey/Tan/Lite Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg' },
   ];
 
   const handleQuickAdd = (productTitle) => {
