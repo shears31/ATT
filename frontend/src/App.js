@@ -26,7 +26,7 @@ function App() {
       <header className="site-header">
         <div className="container header-inner">
           <div className="brand">
-            <div className="logo-placeholder" style={{width: '44px', height: '44px', background: '#CBAF87', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#245886', fontWeight: 'bold'}}>ATT</div>
+            <img src="https://customer-assets.emergentagent.com/job_github-att/artifacts/6b0fcpbl_At%20The%20Turn%20Carolina.png" alt="At The Turn Golf Co." style={{height: '50px', width: 'auto'}} />
             <div>
               <div style={{fontWeight: '700', fontSize: '16px', color: '#fff'}}>At The Turn Golf Co.</div>
               <div className="tagline">Golf, Style & The Turn</div>
