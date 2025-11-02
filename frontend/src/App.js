@@ -26,9 +26,9 @@ function App() {
       <header className="site-header">
         <div className="container header-inner">
           <div className="brand">
-            <div className="logo-placeholder" style={{width: '44px', height: '44px', background: '#57B7E6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold'}}>ATT</div>
+            <div className="logo-placeholder" style={{width: '44px', height: '44px', background: '#CBAF87', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#245886', fontWeight: 'bold'}}>ATT</div>
             <div>
-              <div style={{fontWeight: '700', fontSize: '16px', color: '#0A4C6A'}}>At The Turn Golf Co.</div>
+              <div style={{fontWeight: '700', fontSize: '16px', color: '#fff'}}>At The Turn Golf Co.</div>
               <div className="tagline">Golf, Style & The Turn</div>
             </div>
           </div>
