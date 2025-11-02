@@ -332,6 +332,16 @@ body {
   .hero-inner {
     flex-direction: column-reverse;
     text-align: center;
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    padding: 24px;
+  }
+  
+  .hero-banner .hero-copy {
+    padding: 24px;
+    margin-top: -60px;
   }
   
   .footer-grid {
@@ -341,7 +351,8 @@ body {
   }
   
   .hero-banner__media img {
-    max-height: 260px;
+    min-height: 300px;
+    max-height: 400px;
   }
   
   .hero-copy h1 {
