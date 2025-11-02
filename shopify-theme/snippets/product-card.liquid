@@ -1,7 +1,7 @@
-<article class="product-card" aria-labelledby="product-{{ product.id }}">
+<article class="product-card" aria-labelledby="product-{{ product.id }}" data-testid="product-card-{{ product.id }}">
   <a href="{{ product.url }}" class="product-link">
     {% if product.featured_image %}
-      <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}" loading="lazy" />
+      <img src="{{ product.featured_image.src }}" alt="{{ product.featured_image.alt | escape }}" loading="lazy" />
     {% else %}
       <img src="{{ 'placeholder.jpg' | asset_url }}" alt="{{ product.title | escape }}" />
     {% endif %}
@@ -16,10 +16,10 @@
   </p>
 
   <div class="product-cta">
-    <a class="btn-secondary" href="{{ product.url }}">View</a>
+    <a class="btn-secondary" href="{{ product.url }}">View Product</a>
     <form method="post" action="/cart/add" class="quick-add" data-product-id="{{ product.id }}">
       <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-      <button type="submit" class="btn-primary">Quick add</button>
+      <button type="submit" class="btn-primary-small" data-testid="add-to-cart-{{ product.id }}">Add to Cart</button>
     </form>
   </div>
 </article>
