@@ -31,12 +31,12 @@ body {
 
 /* Header */
 .site-header {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(36, 88, 134, 0.95);
   backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
   z-index: 40;
-  border-bottom: 1px solid rgba(10, 76, 106, 0.06);
+  border-bottom: 1px solid rgba(146, 196, 216, 0.3);
 }
 
 .header-inner {
@@ -50,6 +50,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  color: var(--color-white);
 }
 
 .brand .logo {
@@ -58,18 +59,18 @@ body {
 
 .tagline {
   font-size: 14px;
-  color: var(--color-muted);
+  color: var(--color-sand);
 }
 
 .main-nav a {
   margin: 0 10px;
-  color: var(--color-primary-dark);
+  color: var(--color-white);
   text-decoration: none;
   font-weight: 600;
 }
 
 .main-nav a:hover {
-  color: var(--color-primary);
+  color: var(--color-sand);
 }
 
 .header-actions {
@@ -85,10 +86,11 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-size: 18px;
+  color: var(--color-white);
 }
 
 .icon-btn:hover {
-  background: rgba(87, 183, 230, 0.1);
+  background: rgba(146, 196, 216, 0.2);
 }
 
 /* Hero */
