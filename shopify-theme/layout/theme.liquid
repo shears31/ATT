@@ -15,23 +15,45 @@
 
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
+        <div class="footer-top">
           <div class="footer-brand">
-            <img src="https://customer-assets.emergentagent.com/job_github-att/artifacts/6b0fcpbl_At%20The%20Turn%20Carolina.png" alt="At The Turn Golf Co. logo" />
-            <p class="footer-tagline">Golf, Style &amp; The Turn</p>
+            <img src="https://customer-assets.emergentagent.com/job_github-att/artifacts/6b0fcpbl_At%20The%20Turn%20Carolina.png" alt="At The Turn Golf Co. logo" class="footer-logo" />
+            <p class="footer-tagline">Golf, Style & The Turn</p>
           </div>
-          <div>
-            <h4>Shop</h4>
-            <a href="/collections/all">All Products</a><br/>
-            <a href="/collections/frontpage">Featured</a>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <a href="/pages/about">About</a><br/>
-            <a href="/pages/contact">Contact</a>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Shop</h4>
+              <a href="/">Home</a>
+              <a href="/collections/all">All Products</a>
+              <a href="/collections/hats">Hats</a>
+              <a href="/collections/towels">Towels</a>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="/pages/about">About</a>
+              <a href="/pages/contact">Contact</a>
+              <a href="/pages/wholesale">Wholesale</a>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <a href="/pages/privacy-policy">Privacy Policy</a>
+              <a href="/pages/terms-of-service">Terms of Service</a>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Follow Us</h4>
+              <a href="https://instagram.com/attheturngolfco" target="_blank">Instagram</a>
+              <a href="mailto:hello@attheturngolfco.com">Email</a>
+            </div>
           </div>
         </div>
-        <p class="copyright">© {{ 'now' | date: "%Y" }} At The Turn Golf Co.</p>
+        
+        <div class="footer-bottom">
+          <p class="copyright">© {{ 'now' | date: "%Y" }} At The Turn Golf Co. All rights reserved.</p>
+        </div>
       </div>
     </footer>
 
