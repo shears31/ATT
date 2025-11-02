@@ -13,6 +13,24 @@ const engine = new Liquid({
   strictFilters: false,
 });
 
+// Register schema and comment as raw tags (Shopify-specific)
+engine.registerTag('schema', {
+  parse: function(tagToken, remainTokens) {
+    this.tokens = [];
+    const stream = this.liquid.parser.parseStream(remainTokens);
+    stream
+      .on('token', (token) => {
+        if (token.name === 'endschema') stream.stop();
+        else this.tokens.push(token);
+      })
+      .on('end', () => {
+        throw new Error(`tag ${tagToken.getText()} not closed`);
+      });
+    stream.start();
+  },
+  render: function() { return Promise.resolve(''); }
+});
+
 // Shopify-like filters
 engine.registerFilter('asset_url', (v) => `/assets/${v}`);
 engine.registerFilter('img_url', (v, size) => v);
