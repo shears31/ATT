@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "title": "Camo on White",
+    "handle": "camo-on-white",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/camo-on-white",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg",
+      "alt": "Camo on White Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 1
+      }
+    }
+  },
+  {
+    "id": 2,
+    "title": "Blue 2 on White",
+    "handle": "blue-2-on-white",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/blue-2-on-white",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg",
+      "alt": "Blue 2 on White Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 2
+      }
+    }
+  },
+  {
+    "id": 3,
+    "title": "Carolina on Blue/White",
+    "handle": "carolina-on-blue-white",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/carolina-on-blue-white",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg",
+      "alt": "Carolina on Blue/White Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 3
+      }
+    }
+  },
+  {
+    "id": 4,
+    "title": "Diego on Grey/Tan/Lite Tan",
+    "handle": "diego-grey-tan",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/diego-grey-tan",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg",
+      "alt": "Diego on Grey/Tan/Lite Tan Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 4
+      }
+    }
+  },
+  {
+    "id": 5,
+    "title": "Camo on White",
+    "handle": "camo-on-white-2",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/camo-on-white-2",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg",
+      "alt": "Camo on White Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 5
+      }
+    }
+  },
+  {
+    "id": 6,
+    "title": "Blue 2 on White",
+    "handle": "blue-2-on-white-2",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/blue-2-on-white-2",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg",
+      "alt": "Blue 2 on White Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 6
+      }
+    }
+  },
+  {
+    "id": 7,
+    "title": "Carolina on Blue/White",
+    "handle": "carolina-on-blue-white-2",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/carolina-on-blue-white-2",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg",
+      "alt": "Carolina on Blue/White Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 7
+      }
+    }
+  },
+  {
+    "id": 8,
+    "title": "Diego on Grey/Tan/Lite Tan",
+    "handle": "diego-grey-tan-2",
+    "price": 2800,
+    "compare_at_price": null,
+    "url": "/products/diego-grey-tan-2",
+    "featured_image": {
+      "src": "https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg",
+      "alt": "Diego on Grey/Tan/Lite Tan Hat"
+    },
+    "variants": {
+      "first": {
+        "id": 8
+      }
+    }
+  }
+]
