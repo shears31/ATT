@@ -56,7 +56,7 @@ function App() {
         </div>
         <div className="container hero-inner">
           <div className="hero-copy">
-            <h1>Golf. Style. The Turn.</h1>
+            <h1>Golf, Style & The Turn</h1>
             <p>Premium hats, towels and accessories crafted for the course and the clubhouse.</p>
             <a href="#featured" className="btn-primary">Shop New Releases</a>
           </div>
