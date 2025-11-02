@@ -98,7 +98,7 @@ function App() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <div className="logo-placeholder" style={{width: '44px', height: '44px', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0A4C6A', fontWeight: 'bold', marginBottom: '8px'}}>ATT</div>
+              <div className="logo-placeholder" style={{width: '44px', height: '44px', background: '#CBAF87', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#245886', fontWeight: 'bold', marginBottom: '8px'}}>ATT</div>
               <p className="footer-tagline">Golf, Style & The Turn</p>
             </div>
             <div>
