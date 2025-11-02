@@ -56,11 +56,6 @@ function App() {
         </div>
         <div className="container hero-inner">
           <div className="hero-copy">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_github-att/artifacts/o6xal3zb_Untitled%20design%20%282%29.png" 
-              alt="At The Turn Logo" 
-              style={{maxWidth: '200px', height: 'auto', marginBottom: '20px'}}
-            />
             <h1>Golf. Style. The Turn.</h1>
             <p>Premium hats, towels and accessories crafted for the course and the clubhouse.</p>
             <a href="#featured" className="btn-primary">Shop New Releases</a>
