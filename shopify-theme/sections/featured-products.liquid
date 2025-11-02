@@ -1,0 +1,32 @@
+<section id="featured" class="featured-section container">
+  <h2>Featured</h2>
+
+  {% assign collection_handle = section.settings.collection | default: 'frontpage' %}
+  {% assign collection = collections[collection_handle] %}
+
+  {% if collection and collection.products_count > 0 %}
+    <div class="product-grid">
+      {% for product in collection.products | slice: 0, 12 %}
+        {% render 'product-card', product: product %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No featured products yet. Add products to the "{{ collection_handle }}" collection in your admin.</p>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Featured products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection",
+      "label": "Collection handle",
+      "default": "frontpage",
+      "info": "Enter the collection handle (e.g., frontpage)"
+    }
+  ],
+  "presets": [{ "name": "Featured products" }]
+}
+{% endschema %}

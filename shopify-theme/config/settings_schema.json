@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Theme",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo (light)"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_white",
+        "label": "Logo (white)"
+      }
+    ]
+  }
+]
