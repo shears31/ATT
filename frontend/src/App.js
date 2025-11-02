@@ -10,10 +10,11 @@ function App() {
     { id: 2, title: 'Blue 2 on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg' },
     { id: 3, title: 'Carolina on Blue/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg' },
     { id: 4, title: 'Diego on Grey/Tan/Lite Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg' },
-    { id: 5, title: 'Camo on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg' },
-    { id: 6, title: 'Blue 2 on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg' },
-    { id: 7, title: 'Carolina on Blue/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg' },
-    { id: 8, title: 'Diego on Grey/Tan/Lite Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg' },
+    { id: 5, title: 'Blue 2 on Cyan/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/tbhl66o1_Blue2%20on%20Cyan%20white.jpg' },
+    { id: 6, title: 'Cali on White/Lite Blue/Orange', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/ht274tse_Cali%20on%20WhiteLiteBlueOrangy.jpg' },
+    { id: 7, title: 'Camo on Brown/Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/3c96tupo_Camo%20on%20BrownTan.jpg' },
+    { id: 8, title: 'Carolina on Grey/Blue', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zzjbm42q_Carolina%20on%20GreyBlue.jpg' },
+    { id: 9, title: 'Pink on Grey/Pink', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/apgebftr_Pink%20on%20GreyPink.jpg' },
   ];
 
   const handleQuickAdd = (productTitle) => {
