@@ -82,6 +82,8 @@ async function main(){
   // Create a simple home page content
   const heroSection = await fs.readFile(path.join(__dirname, 'shopify-theme/sections/hero.liquid'), 'utf8');
   const featuredSection = await fs.readFile(path.join(__dirname, 'shopify-theme/sections/featured-products.liquid'), 'utf8');
+  const brandStorySection = await fs.readFile(path.join(__dirname, 'shopify-theme/sections/brand-story.liquid'), 'utf8');
+  const contactSection = await fs.readFile(path.join(__dirname, 'shopify-theme/sections/contact-cta.liquid'), 'utf8');
   
   const heroHtml = await engine.parseAndRender(heroSection, {
     ...globalData,
@@ -93,7 +95,17 @@ async function main(){
     section: { settings: { collection: 'frontpage' } }
   });
   
-  globalData.content_for_layout = heroHtml + featuredHtml;
+  const brandStoryHtml = await engine.parseAndRender(brandStorySection, {
+    ...globalData,
+    section: { settings: {} }
+  });
+  
+  const contactHtml = await engine.parseAndRender(contactSection, {
+    ...globalData,
+    section: { settings: {} }
+  });
+  
+  globalData.content_for_layout = heroHtml + featuredHtml + brandStoryHtml + contactHtml;
 
   const outPath = path.join(outDir, 'index.html');
   await renderTemplate(layoutPath, outPath, globalData);
