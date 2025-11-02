@@ -1,0 +1,5 @@
+{
+  "name": "At The Turn Golf Co.",
+  "currency": "USD",
+  "money_format": "${{amount}}"
+}
