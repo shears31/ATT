@@ -47,6 +47,14 @@ function App() {
       </header>
 
       {/* Hero Section */}
+      <section className="hero hero-banner" aria-label="Site header">
+        <div className="hero-banner__media">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_github-att/artifacts/qybvzyu2_Hubhouse.png" 
+            alt="At The Turn Golf Co." 
+          />
+        </div>
+      </section>
 
       {/* Featured Products */}
       <section id="featured" className="featured-section container">
