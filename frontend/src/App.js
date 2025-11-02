@@ -98,7 +98,7 @@ function App() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <div className="logo-placeholder" style={{width: '44px', height: '44px', background: '#CBAF87', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#245886', fontWeight: 'bold', marginBottom: '8px'}}>ATT</div>
+              <img src="https://customer-assets.emergentagent.com/job_github-att/artifacts/6b0fcpbl_At%20The%20Turn%20Carolina.png" alt="At The Turn Golf Co." style={{height: '50px', width: 'auto', marginBottom: '8px'}} />
               <p className="footer-tagline">Golf, Style & The Turn</p>
             </div>
             <div>
