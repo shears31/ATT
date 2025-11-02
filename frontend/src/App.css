@@ -200,7 +200,7 @@ body {
 
 /* Featured Section */
 .featured-section {
-  padding: 100px 0 48px 0;
+  padding: 48px 0;
   position: relative;
   z-index: 10;
 }
