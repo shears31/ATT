@@ -1,12 +1,12 @@
 <section id="featured" class="featured-section container">
-  <h2>Featured</h2>
+  <h2 class="section-title">Shop the Drop</h2>
 
   {% assign collection_handle = section.settings.collection | default: 'frontpage' %}
   {% assign collection = collections[collection_handle] %}
 
   {% if collection and collection.products_count > 0 %}
     <div class="product-grid">
-      {% for product in collection.products | slice: 0, 12 %}
+      {% for product in collection.products | slice: 0, 6 %}
         {% render 'product-card', product: product %}
       {% endfor %}
     </div>
