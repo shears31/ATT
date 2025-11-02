@@ -50,7 +50,7 @@ function App() {
       <section className="hero hero-banner" aria-label="Site header">
         <div className="hero-banner__media">
           <img 
-            src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&h=400&fit=crop" 
+            src="https://customer-assets.emergentagent.com/job_github-att/artifacts/m82sghsm_Untitled%20design%20%282%29.png" 
             alt="At The Turn Golf Co. header" 
           />
         </div>
