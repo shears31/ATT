@@ -4,17 +4,21 @@ import './App.css';
 function App() {
   const [cartCount] = useState(0);
 
-  // Real product data with actual hat mockups
+  // Real product data with actual hat and towel mockups
   const products = [
-    { id: 1, title: 'Camo on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg' },
-    { id: 2, title: 'Blue 2 on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg' },
-    { id: 3, title: 'Carolina on Blue/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg' },
-    { id: 4, title: 'Diego on Grey/Tan/Lite Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg' },
-    { id: 5, title: 'Blue 2 on Cyan/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/tbhl66o1_Blue2%20on%20Cyan%20white.jpg' },
-    { id: 6, title: 'Cali on White/Lite Blue/Orange', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/ht274tse_Cali%20on%20WhiteLiteBlueOrangy.jpg' },
-    { id: 7, title: 'Camo on Brown/Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/3c96tupo_Camo%20on%20BrownTan.jpg' },
-    { id: 8, title: 'Carolina on Grey/Blue', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zzjbm42q_Carolina%20on%20GreyBlue.jpg' },
-    { id: 9, title: 'Pink on Grey/Pink', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/apgebftr_Pink%20on%20GreyPink.jpg' },
+    { id: 1, title: 'Camo on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg', type: 'Hat' },
+    { id: 2, title: 'Blue 2 on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg', type: 'Hat' },
+    { id: 3, title: 'Carolina on Blue/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg', type: 'Hat' },
+    { id: 4, title: 'Diego on Grey/Tan/Lite Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg', type: 'Hat' },
+    { id: 5, title: 'Blue 2 on Cyan/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/tbhl66o1_Blue2%20on%20Cyan%20white.jpg', type: 'Hat' },
+    { id: 6, title: 'Cali on White/Lite Blue/Orange', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/ht274tse_Cali%20on%20WhiteLiteBlueOrangy.jpg', type: 'Hat' },
+    { id: 7, title: 'Camo on Brown/Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/3c96tupo_Camo%20on%20BrownTan.jpg', type: 'Hat' },
+    { id: 8, title: 'Carolina on Grey/Blue', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zzjbm42q_Carolina%20on%20GreyBlue.jpg', type: 'Hat' },
+    { id: 9, title: 'Pink on Grey/Pink', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/apgebftr_Pink%20on%20GreyPink.jpg', type: 'Hat' },
+    { id: 10, title: 'Carolina Blue Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/blbsokeu_Carolina%20Blue%20Towel.png', type: 'Towel' },
+    { id: 11, title: 'Desert Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/s2sgdgox_Desert%20Towel.png', type: 'Towel' },
+    { id: 12, title: 'Sunset Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nmx4x4ks_Untitled%20Project%20%283%29.png', type: 'Towel' },
+    { id: 13, title: 'OG Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/8navq80a_OG%20Towel.png', type: 'Towel' },
   ];
 
   const handleQuickAdd = (productTitle) => {
