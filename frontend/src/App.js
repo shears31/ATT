@@ -66,9 +66,39 @@ function App() {
 
       {/* Featured Products */}
       <section id="featured" className="featured-section container">
-        <h2>Featured</h2>
+        <h2>Hats</h2>
         <div className="product-grid">
-          {products.map((product) => (
+          {hats.map((product) => (
+            <article key={product.id} className="product-card" data-testid={`product-card-${product.id}`}>
+              <a href="#" className="product-link">
+                <img src={product.image} alt={product.title} loading="lazy" />
+              </a>
+              <h3>
+                <a href="#">{product.title}</a>
+              </h3>
+              <p className="price">
+                <span className="now">${product.price.toFixed(2)}</span>
+              </p>
+              <div className="product-cta">
+                <a className="btn-secondary" href="#">View</a>
+                <button 
+                  className="btn-primary" 
+                  onClick={() => handleQuickAdd(product.title)}
+                  data-testid={`quick-add-${product.id}`}
+                >
+                  Quick add
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Towels Section */}
+      <section id="towels" className="featured-section container">
+        <h2>Towels</h2>
+        <div className="product-grid">
+          {towels.map((product) => (
             <article key={product.id} className="product-card" data-testid={`product-card-${product.id}`}>
               <a href="#" className="product-link">
                 <img src={product.image} alt={product.title} loading="lazy" />
