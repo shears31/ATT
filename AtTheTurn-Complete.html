@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>At The Turn Golf Co.</title>
+  
+  <!-- React and Babel -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <style>
+    :root {
+      --color-primary: #92C4D8;
+      --color-primary-dark: #245886;
+      --color-accent: #E66863;
+      --color-sand: #CBAF87;
+      --color-muted: #6B7280;
+      --color-white: #FFFFFF;
+      --radius: 10px;
+      --container-width: 1200px;
+      --gap: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: var(--color-primary-dark);
+      background: linear-gradient(180deg, #fff 0%, var(--color-sand) 100%);
+      -webkit-font-smoothing: antialiased;
+      padding-top: 0;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Header */
+    .site-header {
+      background: rgba(36, 88, 134, 0.95);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid rgba(146, 196, 216, 0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--color-white);
+    }
+
+    .brand .logo {
+      height: 44px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: var(--color-sand);
+    }
+
+    .main-nav a {
+      margin: 0 10px;
+      color: var(--color-white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .main-nav a:hover {
+      color: var(--color-sand);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .icon-btn {
+      background: none;
+      border: 0;
+      padding: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      color: var(--color-white);
+    }
+
+    .icon-btn:hover {
+      background: rgba(146, 196, 216, 0.2);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 48px 0;
+    }
+
+    .hero-inner {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      flex: 1;
+    }
+
+    .hero-copy h1 {
+      font-size: 42px;
+      margin: 0 0 12px;
+      color: var(--color-primary-dark);
+    }
+
+    .hero-copy p {
+      color: var(--color-muted);
+      margin: 0 0 18px;
+      font-size: 18px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-accent);
+      color: var(--color-white);
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 16px;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(230, 104, 99, 0.4);
+    }
+
+    .hero-visual img {
+      max-width: 420px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(10, 76, 106, 0.08);
+    }
+
+    /* Hero banner */
+    .hero-banner {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      background: transparent;
+      margin: 0;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    .hero-banner__media {
+      width: 100%;
+      display: block;
+      background: transparent;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-banner__media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+    }
+
+    /* Featured Section */
+    .featured-section {
+      padding: 48px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .featured-section h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 6px 18px rgba(11, 75, 110, 0.04);
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 10px 30px rgba(11, 75, 110, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 12px 0 6px;
+      font-size: 16px;
+    }
+
+    .product-card h3 a {
+      color: var(--color-primary-dark);
+      text-decoration: none;
+    }
+
+    .product-card h3 a:hover {
+      color: var(--color-primary);
+    }
+
+    .product-card .price {
+      color: var(--color-primary-dark);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .product-cta {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--color-primary-dark);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--color-primary-dark);
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-primary-dark);
+      color: white;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+      padding: 36px 0;
+      margin-top: 48px;
+    }
+
+    .footer-grid {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .footer-brand img {
+      height: 44px;
+    }
+
+    .footer-tagline {
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 6px;
+    }
+
+    .footer-grid h4 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .footer-grid a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .footer-grid a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner {
+        flex-direction: column-reverse;
+        text-align: center;
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 24px;
+      }
+      
+      .hero-banner .hero-copy {
+        padding: 24px;
+        margin-top: -60px;
+      }
+      
+      .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .hero-banner__media img {
+        min-height: 300px;
+        max-height: 400px;
+      }
+      
+      .hero-copy h1 {
+        font-size: 28px;
+      }
+      
+      .hero-copy p {
+        font-size: 14px;
+      }
+      
+      .main-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [cartCount] = useState(0);
+
+      // Real product data with actual hat and towel mockups
+      const hats = [
+        { id: 1, title: 'Camo on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zoqj7r1c_Camo%20on%20White.jpg' },
+        { id: 2, title: 'Blue 2 on White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nhif3hsg_Blue%202%20on%20White.jpg' },
+        { id: 3, title: 'Carolina on Blue/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/wleyt7mh_Carolina%20on%20BlueWhite.jpg' },
+        { id: 4, title: 'Diego on Grey/Tan/Lite Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/08ud1a25_Diego%20on%20GreyTanLiteTan.jpg' },
+        { id: 5, title: 'Blue 2 on Cyan/White', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/tbhl66o1_Blue2%20on%20Cyan%20white.jpg' },
+        { id: 6, title: 'Cali on White/Lite Blue/Orange', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/ht274tse_Cali%20on%20WhiteLiteBlueOrangy.jpg' },
+        { id: 7, title: 'Camo on Brown/Tan', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/3c96tupo_Camo%20on%20BrownTan.jpg' },
+        { id: 8, title: 'Carolina on Grey/Blue', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/zzjbm42q_Carolina%20on%20GreyBlue.jpg' },
+        { id: 9, title: 'Pink on Grey/Pink', price: 28.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/apgebftr_Pink%20on%20GreyPink.jpg' },
+      ];
+
+      const towels = [
+        { id: 10, title: 'Carolina Blue Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/blbsokeu_Carolina%20Blue%20Towel.png' },
+        { id: 11, title: 'Desert Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/s2sgdgox_Desert%20Towel.png' },
+        { id: 12, title: 'Sunset Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/nmx4x4ks_Untitled%20Project%20%283%29.png' },
+        { id: 13, title: 'OG Towel', price: 24.00, image: 'https://customer-assets.emergentagent.com/job_github-att/artifacts/8navq80a_OG%20Towel.png' },
+      ];
+
+      const handleQuickAdd = (productTitle) => {
+        alert(`Added "${productTitle}" to cart!`);
+      };
+
+      return (
+        <div className="App">
+          {/* Header */}
+          <header className="site-header">
+            <div className="container header-inner">
+              <div className="brand">
+                <img src="https://customer-assets.emergentagent.com/job_github-att/artifacts/6b0fcpbl_At%20The%20Turn%20Carolina.png" alt="At The Turn Golf Co." style={{height: '50px', width: 'auto'}} />
+                <div>
+                  <div style={{fontWeight: '700', fontSize: '16px', color: '#fff'}}>At The Turn Golf Co.</div>
+                  <div className="tagline">Golf, Style & The Turn</div>
+                </div>
+              </div>
+              <nav className="main-nav">
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+              </nav>
+              <div className="header-actions">
+                <button className="icon-btn" aria-label="Search">🔍</button>
+                <button className="icon-btn" aria-label="Cart">
+                  🛒 {cartCount > 0 && <span>({cartCount})</span>}
+                </button>
+              </div>
+            </div>
+          </header>
+
+          {/* Hero Section */}
+          <section className="hero hero-banner" aria-label="Site header">
+            <div className="hero-banner__media">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_github-att/artifacts/qybvzyu2_Hubhouse.png" 
+                alt="At The Turn Golf Co." 
+              />
+            </div>
+          </section>
+
+          {/* Hats Section */}
+          <section id="featured" className="featured-section container">
+            <h2>Hats</h2>
+            <div className="product-grid">
+              {hats.map((product) => (
+                <article key={product.id} className="product-card" data-testid={`product-card-${product.id}`}>
+                  <a href="#" className="product-link">
+                    <img src={product.image} alt={product.title} loading="lazy" />
+                  </a>
+                  <h3>
+                    <a href="#">{product.title}</a>
+                  </h3>
+                  <p className="price">
+                    <span className="now">${product.price.toFixed(2)}</span>
+                  </p>
+                  <div className="product-cta">
+                    <a className="btn-secondary" href="#">View</a>
+                    <button 
+                      className="btn-primary" 
+                      onClick={() => handleQuickAdd(product.title)}
+                      data-testid={`quick-add-${product.id}`}
+                    >
+                      Quick add
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          {/* Towels Section */}
+          <section id="towels" className="featured-section container">
+            <h2>Towels</h2>
+            <div className="product-grid">
+              {towels.map((product) => (
+                <article key={product.id} className="product-card" data-testid={`product-card-${product.id}`}>
+                  <a href="#" className="product-link">
+                    <img src={product.image} alt={product.title} loading="lazy" />
+                  </a>
+                  <h3>
+                    <a href="#">{product.title}</a>
+                  </h3>
+                  <p className="price">
+                    <span className="now">${product.price.toFixed(2)}</span>
+                  </p>
+                  <div className="product-cta">
+                    <a className="btn-secondary" href="#">View</a>
+                    <button 
+                      className="btn-primary" 
+                      onClick={() => handleQuickAdd(product.title)}
+                      data-testid={`quick-add-${product.id}`}
+                    >
+                      Quick add
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          {/* Footer */}
+          <footer className="site-footer">
+            <div className="container">
+              <div className="footer-grid">
+                <div className="footer-brand">
+                  <img src="https://customer-assets.emergentagent.com/job_github-att/artifacts/6b0fcpbl_At%20The%20Turn%20Carolina.png" alt="At The Turn Golf Co." style={{height: '50px', width: 'auto', marginBottom: '8px'}} />
+                  <p className="footer-tagline">Golf, Style & The Turn</p>
+                </div>
+                <div>
+                  <h4>Shop</h4>
+                  <a href="#">All Products</a><br/>
+                  <a href="#">Featured</a>
+                </div>
+                <div>
+                  <h4>Company</h4>
+                  <a href="#">About</a><br/>
+                  <a href="#">Contact</a>
+                </div>
+              </div>
+              <p className="copyright">© 2025 At The Turn Golf Co.</p>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
